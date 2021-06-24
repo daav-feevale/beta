@@ -182,3 +182,20 @@ $(document).ready(function(){
 
 
 });
+
+// Até aqui tudo bem,
+// dá pra setar os temas.
+
+const TemaRegular = {
+	'--font-family-default': 'Paralucent',
+	'--font-family-quote': 'Times New Roman',
+	'--font-family-mono': 'JetBrainsMono',
+	themeName: 'TemaRegular'
+}
+
+const TemaAcessivel = {
+	'--font-family-default': 'opendyslexic',
+	'--font-family-quote': 'opendyslexic',
+	'--font-family-mono': 'opendyslexic-mono',
+	themeName: 'TemaAcessivel'
+}
