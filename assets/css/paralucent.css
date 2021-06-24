@@ -1,0 +1,24 @@
+@font-face{
+    font-family: "Paralucent";
+	src: url('../fonts/Paralucent-Medium.otf') format("opentype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+    font-family: "Paralucent";
+	src: url('../fonts/Paralucent-MediumItalic.otf') format("opentype");
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face{
+    font-family: "Paralucent";
+	src: url('../fonts/Paralucent-Bold.otf') format("opentype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+    font-family: "Paralucent";
+	src: url('../fonts/Paralucent-BoldItalic.otf') format("opentype");
+	font-weight: bold;
+	font-style: italic;
+}
