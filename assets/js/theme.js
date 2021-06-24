@@ -199,3 +199,34 @@ const TemaAcessivel = {
 	'--font-family-mono': 'opendyslexic-mono',
 	themeName: 'TemaAcessivel'
 }
+
+// A partir daqui começa a piorar.
+
+const isObject = (obj) => obj === Object(obj)
+
+const setCSSVariable = (key, value) => document.body.style.setProperty(key, value)
+
+const saveTheme = (theme) => {
+  if (window.localStorage) {
+    localStorage['theme'] = JSON.stringify(theme)
+    localStorage['currentTheme'] = theme.themeName
+  }
+}
+
+const loadSavedTheme = () => {
+  if (window.localStorage) {
+    const maybeTheme = localStorage['theme']
+    if (maybeTheme) return JSON.parse(maybeTheme)
+  }
+
+  return null
+}
+
+const updateTheme = (theme) => {
+  if (!isObject(theme)) return
+
+  Object
+  .entries(theme)
+  .forEach(([key, value]) => setCSSVariable(key, value))
+
+  saveTheme(theme)
