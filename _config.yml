@@ -1,10 +1,9 @@
 # Site
-name: "Memoirs"
-title: "Memoirs"
-description: "I will take you on the fabulous world of exploration. Travel, culture, lifestyle. Eat, Pray, Love!"
+name: "Diretório Acadêmico do Audiovisual da Feevale"
+title: "Diretório Acadêmico do Audiovisual da Feevale"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /jekyll-theme-memoirs
+baseurl: /
 disqus: 'da-av'
 include: ["_pages"]
 permalink: /:year/:month/:title/
