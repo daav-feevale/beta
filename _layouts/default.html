@@ -70,12 +70,30 @@
 
     <!-- Site Logo/Name
     ================================================== -->
-   
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-        <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-    </a>  
-   
-
+<!-- O <div style= serve para fazer
+    com que não tenha um caractere de
+    espaço separando o logo do site do
+    ícone de acessibilidade. -->
+    <div style="
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 0 !important;">
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+            </a>
+            <a id="theme-toggle" style="cursor: pointer" onclick="switchTheme()">
+            <svg width="2em" height="2em" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" role="img">
+                    <g transform="matrix(1,0,0,1,-341.643,-105.856)">
+                        <g transform="matrix(0.585366,0,0,0.585366,136.974,43.0133)">
+                            <g id="g9104">
+                                <path id="path6626" d="M390.643,127.856C390.643,139.102 381.389,148.356 370.143,148.356C358.897,148.356 349.643,139.102 349.643,127.856C349.643,116.61 358.897,107.356 370.143,107.356C381.389,107.356 390.643,116.61 390.643,127.856ZM367.066,117.884C367.066,119.655 368.524,121.113 370.296,121.113C372.067,121.113 373.525,119.655 373.525,117.884C373.525,116.112 372.067,114.654 370.296,114.654C368.524,114.654 367.066,116.112 367.066,117.884ZM381.585,121.317C381.435,121.342 381.294,121.401 381.173,121.489L370.143,123.209L359.171,121.466C358.888,121.26 358.489,121.198 358.172,121.351C357.855,121.504 357.647,121.866 357.643,122.21C357.639,122.555 357.859,122.852 358.172,123.012L366.769,125.739L366.71,132L363.677,141.377C363.385,141.804 363.474,142.352 363.912,142.637C364.35,142.921 364.972,142.835 365.264,142.408L370.159,132.286L374.962,142.39C375.222,142.833 375.801,142.987 376.256,142.734C376.71,142.481 376.868,141.917 376.608,141.474L373.631,132.057L373.514,126.163L382.231,122.978C382.583,122.738 382.736,122.282 382.584,121.89C382.431,121.498 382.012,121.27 381.585,121.317L381.585,121.317Z" style="fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+    </div>
     <!-- Site Tag
     ================================================== -->
     {% if page.url == '/' %}
