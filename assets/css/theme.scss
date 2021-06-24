@@ -9,7 +9,7 @@
   }
 
 $brown: #B59F62;
-$teal: #40FFDC;
+$teal: #5865f2;
 $black: #111;
 $primary: $teal;
 $dark:    $black;
@@ -20,12 +20,29 @@ $enable-rounded: false;
 @import "bootstrap/mixins";
 @import 'bootstrap/bootstrap';
 @import 'stars';
-
-
-// general
-body, input, button, select, optgroup, textarea {   
-    font-family:Sen;
+//importar paralucent
+@import url('paralucent.css') ;
+// acessibilidade: opendyslexic
+@import url('opendyslexic.css') ;
+// importar jetbrains mono
+@import url('jetbrainsmono.css') ;
+// códigos com
+// quebra de
+// linha
+pre code{
+    white-space: pre-wrap;
 }
+
+// general - sem acessibilidade
+// body, input, button, select, optgroup, textarea {   
+//    font-family:Sen;
+// }
+
+// acessibilidade: general
+body, input, button, select, optgroup, textarea {   
+    font-family: var( --font-family-default ) ;
+}
+
 body {
     line-height:1.7;
     background: #f4f4f4;
@@ -62,8 +79,23 @@ h1,h2,h3,h4,h5,h6 {
 .btn {
     min-width: 180px;
 }
+// blockquote - sem acessibilidade
+//blockquote {
+//    font-family:'Times New Roman';
+//    font-style: italic;
+//    font-size: 20px;
+//    position:relative;
+//    border-left:1px solid $dark;
+//    margin-left:30px;
+//    padding-left:15px;
+//    cite {
+//        font-weight:700;
+//    }
+//}
+
+// acessibilidade: blockquote
 blockquote {
-    font-family: Times New Roman;
+    font-family: var( --font-family-quote );
     font-style: italic;
     font-size: 20px;
     position:relative;
